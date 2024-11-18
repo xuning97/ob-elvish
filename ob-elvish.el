@@ -80,7 +80,7 @@ Optional argument PROCESSED-PARAMS may contain PARAMS preprocessed by ‘org-bab
      "\n"
      (mapconcat ;; define any variables
       (lambda (pair)
-        (format "%s = %s"
+        (format "var %s = %s"
                 (car pair) (ob-elvish-var-to-elvish (cdr pair))))
       vars "\n") "\n" body "\n")))
 
